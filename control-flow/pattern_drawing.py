@@ -3,5 +3,5 @@ x = 0
 
 while x < user_input:
     line = "*" * user_input
-    print(f"{line}")
+    print(f"{line}", end = " ")
     x += 1
