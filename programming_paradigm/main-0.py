@@ -13,14 +13,14 @@ def main():
 
     if command == "deposit" and amount is not None:
         account.deposit(amount)
-        print(f"Deposited: ${amount}")
+        print(f"Deposited: ${int(amount) if amount == int(amount) else amount}")
     elif command == "withdraw" and amount is not None:
         if account.withdraw(amount):
-            print(f"Withdrew: ${amount}")
+            print(f"Withdrew: ${int(amount) if amount == int(amount) else amount}")
         else:
             print("Insufficient funds.")
     elif command == "display":
-        account.display_balance()
+        print(f"Current Balance: ${int(account.account_balance) if account.account_balance == int(account.account_balance) else account.account_balance}")
     else:
         print("Invalid command.")
 
