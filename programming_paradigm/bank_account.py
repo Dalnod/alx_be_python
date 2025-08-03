@@ -12,6 +12,5 @@ class BankAccount:
         return True
 
     def display_balance(self):
-        # Not used anymore, but kept for compatibility
-        print(f"Current Balance: ${int(self.account_balance) if self.account_balance == int(self.account_balance) else self.account_balance}")
+        print(f"Current Balance: ${self.account_balance:.2f}")
         
